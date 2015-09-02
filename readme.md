@@ -70,8 +70,7 @@ txt, csv, json, xml
 
 ## xml
 
-    <?xml version="1.1" encoding="UTF-8" ?>
-    <field>
+    <rowset>
         <row> <cell value="5"/> <cell value="3"/> <cell value="_"/> <cell value="_"/> <cell value="7"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> </row>
         <row> <cell value="6"/> <cell value="_"/> <cell value="_"/> <cell value="1"/> <cell value="9"/> <cell value="5"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> </row>
         <row> <cell value="_"/> <cell value="9"/> <cell value="8"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="6"/> <cell value="_"/> </row>
@@ -81,5 +80,5 @@ txt, csv, json, xml
         <row> <cell value="_"/> <cell value="6"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="2"/> <cell value="8"/> <cell value="_"/> </row>
         <row> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="4"/> <cell value="1"/> <cell value="9"/> <cell value="_"/> <cell value="_"/> <cell value="5"/> </row>
         <row> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="_"/> <cell value="8"/> <cell value="_"/> <cell value="_"/> <cell value="7"/> <cell value="9"/> </row>
-    </field>
+    </rowset>
 
