@@ -10,7 +10,7 @@ class XmlFormat(BaseFormat):
 
         for row in data:
             row_el = ElementTree.SubElement(rowset_el, 'row')
-            clean_row = (r or '_' for r in row)
+            clean_row = (str(r) if r else '_' for r in row)
 
             for cell in clean_row:
                 ElementTree.SubElement(row_el, 'cell', {'value': cell})

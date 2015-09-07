@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 class State:
     x = 0
     y = 0
@@ -25,6 +28,9 @@ class State:
     def __setitem__(self, pos, val):
         x, y = pos
         self._data[x][y] = val
+
+    def to_structure(self):
+        return deepcopy(self._data)
 
     def set_cell(self, val):
         self._data[self.x][self.y] = val

@@ -6,7 +6,7 @@ class TxtFormat(BaseFormat):
     def to_data(cls, data):
         lines = []
         for row in data:
-            clean = (r or '_' for r in row)
+            clean = (str(r) if r else '_' for r in row)
             line = ' '.join(clean)
             lines.append(line)
 

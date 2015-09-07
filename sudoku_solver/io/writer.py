@@ -8,9 +8,9 @@ class Writer:
         self.file_path = file_path
 
         if not self.force and os.path.exists(file_path):
-            raise Exception(u'File "%s" already exists. Use the --force to overwrite' % file_path)
+            raise Exception('File "%s" already exists. Use the --force=True to overwrite' % file_path)
 
-    def write(self, grid):
+    def write(self, state):
         with open(self.file_path, 'w') as fh:
-            data = self.formatter.to_data(grid.to_structure())
+            data = self.formatter.to_data(state.to_structure())
             fh.write(data)
