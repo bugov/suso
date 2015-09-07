@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 import argparse
 from sudoku_solver.io.reader import Reader
 from sudoku_solver.io.writer import Writer

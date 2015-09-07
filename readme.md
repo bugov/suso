@@ -7,7 +7,7 @@
 
 Пример:
 ```
-suso.py --in=./example/input1.json --out=./output.xml
+suso.py --in-file=./example/input1.json --out-file=./output.xml
 ```
 
 # Параметры
