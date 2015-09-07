@@ -2,8 +2,6 @@ from copy import deepcopy
 
 
 class State:
-    x = 0
-    y = 0
     _size = 9
     _segment_size = 3
 
@@ -21,7 +19,6 @@ class State:
         return '[' + ',\n'.join(str_list) + ']'
 
     def __getitem__(self, pos):
-        print pos
         x, y = pos
         return self._data[x][y]
 

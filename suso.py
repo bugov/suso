@@ -17,12 +17,14 @@ args = parser.parse_args()
 
 in_format = get_formatter(args.in_format, args.in_file)
 out_format = get_formatter(args.out_format, args.out_file)
+
 reader = Reader(in_format, args.in_file)
 writer = Writer(out_format, args.out_file, args.force)
 
 state = reader.read()
-
 rules = [rule_registry.get_rule(name) for name in args.rules.split(';')]
+
 solver = BacktrackingSolver(rules)
 state = solver.solve(state)
+
 writer.write(state)
