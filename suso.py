@@ -28,4 +28,7 @@ rules = [rule_registry.get_rule(name) for name in args.rules.split(';')]
 solver = BacktrackingSolver(rules)
 state = solver.solve(state)
 
-writer.write(state)
+if state:
+    writer.write(state)
+else:
+    print "Solution not found"
