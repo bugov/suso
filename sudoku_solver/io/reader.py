@@ -1,12 +1,14 @@
-from ..models import RowSet
+from ..models import State
 
 
 class Reader:
-    def read(self, file_path, Formatter):
-        with open(file_path, 'r') as fh:
+    def __init__(self, Formatter, file_path):
+        self.formatter = Formatter
+        self.file_path = file_path
+
+    def read(self):
+        with open(self.file_path, 'r') as fh:
             data = fh.read()
-            structure = Formatter.to_python(data)
+            structure = self.formatter.to_python(data)
 
-        row_set = RowSet(structure)
-
-        return row_set
+        return State(structure)
